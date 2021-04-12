@@ -23,8 +23,16 @@ public class StackClass {
         NewLinkedList.append(node);
     }
 
+    public void dequeue() {
+        NewLinkedList.popLast();
+    }
+
     public INode lastestElementOfStack() {
         return NewLinkedList.head();
+    }
+
+    public INode firstElementOfQueue() {
+        return NewLinkedList.tail();
     }
 
     public void printStack() {

@@ -45,5 +45,17 @@ public class StackTest {
         stack.printStack();
         Assertions.assertEquals( stack.lastestElementOfStack(), firstNode);
     }
+
+    public void whenDequeued_TailShouldBeMovedBackOneNode() {
+        Node<Integer> firstNode = new Node<>(70);
+        Node<Integer> secondNode = new Node<>(30);
+        Node<Integer> thirdNode = new Node<>(56);
+        StackClass stack = new StackClass();
+        stack.enqueue(firstNode);
+        stack.enqueue(secondNode);
+        stack.enqueue(thirdNode);
+        stack.dequeue();
+        Assertions.assertEquals(stack.firstElementOfQueue(), secondNode);
+    }
 }
 
